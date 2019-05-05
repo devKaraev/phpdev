@@ -18,7 +18,8 @@ class EmailController
         $bookEmail = run::showBookForEmail($idBook);
 
         if (isset($_POST['submit'])) {
-            $name = $_POST['name'];
+            $name = ucfirst($_POST['name']);
+            var_dump($name);
             $email = $_POST['email'];
 
             if (!validate::checkName($name)) {
