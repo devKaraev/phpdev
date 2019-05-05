@@ -19,7 +19,6 @@ class EmailController
 
         if (isset($_POST['submit'])) {
             $name = ucfirst($_POST['name']);
-            var_dump($name);
             $email = $_POST['email'];
 
             if (!validate::checkName($name)) {
